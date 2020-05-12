@@ -1,0 +1,21 @@
+Laborator 5: Grafuri
+
+Reprezentati un graf folosind reprezentarea cu liste de adiacenta. Puteti folosi si vectori in loc de liste.
+Folositi o reprezentare moderna si orientata-obiect de grafuri in care avem o clasa directedGraph cu structura urmatoare:
+
+class directedGraph{
+   //lista de adiacenta
+public:
+   void addNode(int a); //construieste si/sau modifica lista de adiacenta
+   void addEdge(int source, int target); //construieste si/sau modifica lista de adiacenta
+   int hasEdge(int source, int target); // return 1 daca exista muchie
+   //omitem delNode, delEdge
+   [1.] void BFS(int startNode); //afiseaza nodurile; folosind o coada; puteti folosi librarii
+   [2.] void DFS(int startNode); //afiseaza nodurile; folosind o recursie e ok
+   [3.] int twoCycles(); //numara si intoarce cate 2-cicluri sunt in graf; [3->5 , 5->3] este un 2-ciclu
+};
+
+4. (☺) Imbunatatiti performanta lui hasEdge.
+Adica compotamentul de performanta algoritmica asimptotica: clasa de complexitate O.
+Nu se puncteaza imbunatatirile de implementare care nu imbunatatesc si clasa de complexitate O.
+Nota: se poate considera ca numarul si id-urile de noduri sunt marginite sa zicem cu 10000.
